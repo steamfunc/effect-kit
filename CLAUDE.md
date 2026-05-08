@@ -11,9 +11,17 @@
 
 ### Feature 브랜치 워크플로우
 1. `develop`에서 `feature/issue-{번호}` 브랜치 생성
-2. 프로젝트 루트에 `context-{번호}.md` 생성
-3. **context 파일 작성 완료 전까지 코딩 시작하지 않는다**
-4. 작업 완료 후: context 파일 삭제 커밋 → rebase-squash → `develop`에 fast-forward merge
+2. **GitHub Project 상태 → `InProgress`로 변경**
+3. 프로젝트 루트에 `context-{번호}.md` 생성
+4. **context 파일 작성 완료 전까지 코딩 시작하지 않는다**
+5. 완료조건 달성 시:
+   - **GitHub Project 상태 → `Review`로 변경**
+   - **GitHub issue에 변경사항 요약 코멘트 작성**
+   - **사용자 승인을 기다린다. 승인 전까지 merge하지 않는다.**
+6. 사용자 승인 후:
+   - **GitHub Project 상태 → `Done`으로 변경**
+   - context 파일 삭제 커밋 → rebase-squash → `develop`에 fast-forward merge
+   - **GitHub issue close**
 
 ### Release / Hotfix
 git flow 표준 방식 (squash 없이 merge commit 유지).
@@ -39,6 +47,7 @@ git flow 표준 방식 (squash 없이 merge commit 유지).
 |------|----------|------|------|
 | 2026-05-08 | 초기 구성 | 전체 | - |
 | 2026-05-08 | 브랜치 정책 추가, context 파일 자동 로딩 추가 | CLAUDE.md | - |
+| 2026-05-09 | issue 상태 관리 워크플로우 추가 | CLAUDE.md | - |
 
 ---
 

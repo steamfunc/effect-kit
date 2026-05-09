@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/oddpoet/SteamFunc/effect-kit/.claude/hooks/check-path.sh",
+            "statusMessage": "경로 확인 중..."
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /Users/oddpoet/SteamFunc/effect-kit && ./gradlew detekt test 2>&1 | tail -20",
+            "timeout": 120,
+            "statusMessage": "detekt + test 실행 중..."
+          }
+        ]
+      }
+    ]
+  }
+}

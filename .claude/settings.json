@@ -12,6 +12,18 @@
         ]
       }
     ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/oddpoet/SteamFunc/effect-kit/.claude/hooks/pr-checklist.sh",
+            "statusMessage": "PR 체크리스트 확인 중..."
+          }
+        ]
+      }
+    ],
     "Stop": [
       {
         "hooks": [

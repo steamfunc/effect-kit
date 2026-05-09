@@ -48,6 +48,7 @@ git flow 표준 방식 (squash 없이 merge commit 유지).
 | 2026-05-08 | 초기 구성 | 전체 | - |
 | 2026-05-08 | 브랜치 정책 추가, context 파일 자동 로딩 추가 | CLAUDE.md | - |
 | 2026-05-09 | issue 상태 관리 워크플로우 추가 | CLAUDE.md | - |
+| 2026-05-10 | PreToolUse 경로 차단 hook + Stop test hook 추가 | .claude/settings.json | 프로젝트 외부 변경 방지, 매 턴 테스트 자동 실행 |
 
 ---
 
